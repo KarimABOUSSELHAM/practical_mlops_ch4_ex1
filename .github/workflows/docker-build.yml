@@ -20,7 +20,7 @@ jobs:
     
     - name: Run the docker container
       run: |
-        docker run -d -p 5001:5001 flask-predict
+        docker run -d --name flask-predict -p 5001:5001 flask-predict
     
     - name: Wait for Flask app to start
       run: sleep 5
