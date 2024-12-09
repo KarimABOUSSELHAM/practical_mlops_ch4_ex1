@@ -20,7 +20,7 @@ jobs:
     
     - name: Run the docker container
       run: |
-        docker run -p 5000:5000 flask-predict
+        docker run -d -p 5000:5000 flask-predict
     
     - name: Test the flask application "GET" endpoints
       run: |
