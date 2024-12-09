@@ -20,13 +20,13 @@ jobs:
     
     - name: Run the docker container
       run: |
-        docker run -d -p 5000:5000 flask-predict
+        docker run -d -p 5001:5001 flask-predict
     
     - name: Test the flask application "GET" endpoints
       run: |
-        curl --fail http://localhost:5000 || exit 1
-        curl --fail http://localhost:5000/example || exit 1
-        curl --fail http://localhost:5000/metadata || exit 1
+        curl --fail http://localhost:5001 || exit 1
+        curl --fail http://localhost:5001/example || exit 1
+        curl --fail http://localhost:5001/metadata || exit 1
     
     - name: Stop the docker container and remove it
       run: |
