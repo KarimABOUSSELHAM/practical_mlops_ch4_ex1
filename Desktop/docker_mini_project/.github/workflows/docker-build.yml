@@ -1,0 +1,33 @@
+name: CI/CD flask container app
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    # Add QEMU setup to test the support for more platforms (this is optional but recommended)
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    
+    - name: Build Docker image
+      run: |
+        docker build -t flask-predict .
+    
+    - name: Run the docker container
+      run: |
+        docker run -p 5000:5000 flask-predict
+    
+    - name: Test the flask application "GET" endpoints
+      run: |
+        curl --fail http://localhost:5000 || exit 1
+        curl --fail http://localhost:5000/example || exit 1
+        curl --fail http://localhost:5000/metadata || exit 1
+    
+    - name: Stop the docker container and remove it
+      run: |
+        docker stop flask-predict && docker rm flask-predict
