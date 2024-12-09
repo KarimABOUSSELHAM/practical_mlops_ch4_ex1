@@ -1,4 +1,7 @@
-[![CI/CD flask container app](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml/badge.svg)](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml)
+[![CI/CD flask container app](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml/badge.svg)](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml)  
+
+This repository exposes a solution to the exercise n° 1 of the chapter 4 of Gift, N., & Deza, A. (2021). [*Practical MLOps Operationalizing Machine Learning Models*](https://www.oreilly.com/library/view/practical-mlops/9781098103002/). O'Reilly Media.  
+  
 # Exercise n° 1 statement
 
 `Create your own Flask application in a container, publish it to a GitHub repository, document it thoroughly, and add GitHub Actions to ensure it builds correctly.`
