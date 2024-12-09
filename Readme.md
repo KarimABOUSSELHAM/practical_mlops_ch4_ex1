@@ -1,3 +1,4 @@
+[![CI/CD flask container app](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml/badge.svg)](https://github.com/KarimABOUSSELHAM/practical_mlops_ch4_ex1/actions/workflows/docker-build.yml)
 # Exercise n° 1 statement
 
 `Create your own Flask application in a container, publish it to a GitHub repository, document it thoroughly, and add GitHub Actions to ensure it builds correctly.`
